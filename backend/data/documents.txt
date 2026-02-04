@@ -1,0 +1,144 @@
+[DOC_ID:1]
+ReValix is an AI-powered real estate analytics platform.
+It helps users analyze property values, rental yield, neighborhood trends,
+and investment potential using data-driven insights.
+The platform is mainly used by investors, analysts, and real estate professionals.
+
+[DOC_ID:2]
+Retrieval-Augmented Generation (RAG) is an AI technique used in modern applications.
+It works by retrieving relevant documents first and then generating answers
+based only on that information.
+RAG helps reduce wrong or hallucinated answers from AI systems.
+
+[DOC_ID:3]
+FAISS is a vector database library developed by Facebook AI Research.
+It is used to store and search vector embeddings efficiently.
+FAISS is commonly used in AI applications like chatbots and document search.
+
+[DOC_ID:4]
+Rental yield in real estate is calculated by dividing annual rental income
+by the property purchase price and multiplying by 100.
+A higher rental yield usually indicates a better rental investment.
+
+[DOC_ID:5]
+Drinking enough water every day is important for good health.
+On average, adults should drink around 2 to 3 liters of water per day,
+depending on climate and physical activity.
+
+[DOC_ID:6]
+Eating fruits and vegetables daily helps provide essential vitamins and minerals.
+Common healthy fruits include apples, bananas, and oranges.
+Vegetables like spinach, carrots, and tomatoes are good for overall health.
+
+[DOC_ID:7]
+Regular physical exercise helps maintain a healthy body and mind.
+Activities like walking, jogging, cycling, or yoga for at least 30 minutes
+a day can improve heart health and reduce stress.
+
+[DOC_ID:8]
+Sleep is essential for the human body to recover and function properly.
+Most adults need around 7 to 9 hours of sleep every night
+to stay focused and energetic during the day.
+
+[DOC_ID:9]
+Using mobile phones for long hours can cause eye strain and fatigue.
+Taking short breaks and following the 20-20-20 rule helps protect eye health.
+
+[DOC_ID:10]
+Cooking food at home is generally healthier than eating outside frequently.
+Home-cooked meals allow better control over ingredients, oil, and hygiene.
+
+[DOC_ID:11]
+Saving a small portion of income every month helps manage personal finances.
+Maintaining an emergency fund can provide financial security
+during unexpected situations.
+
+[DOC_ID:12]
+Using public transport or carpooling can reduce traffic and pollution.
+It also helps save fuel costs and contributes to a cleaner environment.
+
+[DOC_ID:13]
+Cricket is a popular outdoor team sport played between two teams of eleven players each.
+The main objective is to score more runs than the opposing team.
+Cricket is played using a bat, a ball, and wickets on a rectangular pitch.
+
+[DOC_ID:14]
+A cricket match is played on a field with a 22-yard pitch in the center.
+At each end of the pitch, there are three wooden stumps with two bails on top,
+together known as the wicket.
+
+[DOC_ID:15]
+In cricket, one team bats while the other team bowls and fields.
+The batting team tries to score runs by hitting the ball and running between wickets,
+while the bowling team tries to get batters out.
+
+[DOC_ID:16]
+Runs in cricket can be scored by running between the wickets or by hitting boundaries.
+A boundary gives four runs if the ball reaches the rope after touching the ground,
+and six runs if it crosses the rope without touching the ground.
+
+[DOC_ID:17]
+A batter can be dismissed in several ways, including:
+bowled, caught, leg before wicket (LBW), run out, and stumped.
+Once dismissed, the batter must leave the field.
+
+[DOC_ID:18]
+An over in cricket consists of six legal deliveries bowled by a bowler.
+After one over, another bowler bowls from the opposite end of the pitch.
+
+[DOC_ID:19]
+There are three main formats of cricket:
+Test cricket, One Day Internationals (ODIs), and Twenty20 (T20).
+Test matches last up to five days, ODIs are limited to 50 overs per side,
+and T20 matches are limited to 20 overs per side.
+
+[DOC_ID:20]
+Test cricket is considered the longest and most traditional format of the game.
+Players wear white clothing, and matches are played with a red ball.
+
+[DOC_ID:21]
+One Day International cricket is played with colored clothing and a white ball.
+Each team gets 50 overs to bat, making the game faster than Test cricket.
+
+[DOC_ID:22]
+T20 cricket is the shortest and most entertaining format.
+Each team gets 20 overs, and matches usually finish within three hours.
+
+[DOC_ID:23]
+Common cricket player roles include batters, bowlers, all-rounders, and wicketkeepers.
+Batters focus on scoring runs, bowlers focus on taking wickets,
+all-rounders perform both roles, and wicketkeepers stand behind the stumps.
+
+[DOC_ID:24]
+Fast bowlers rely on speed and swing, while spin bowlers rely on turn and variation.
+Spin bowling includes off-spin and leg-spin techniques.
+
+[DOC_ID:25]
+Famous cricket tournaments include the ICC Cricket World Cup,
+ICC T20 World Cup, Indian Premier League (IPL), and The Ashes series.
+
+[DOC_ID:26]
+The Indian Premier League (IPL) is a professional T20 league played in India.
+It features franchise teams and attracts players from many countries.
+
+[DOC_ID:27]
+India is one of the strongest cricket-playing nations in the world.
+Cricket in India is governed by the Board of Control for Cricket in India (BCCI).
+
+[DOC_ID:28]
+Cricket requires physical fitness, hand-eye coordination, and teamwork.
+Regular practice improves batting, bowling accuracy, and fielding skills.
+
+[DOC_ID:29]
+Umpires are officials who ensure the rules of cricket are followed.
+They make decisions on dismissals, no-balls, wides, and other match events.
+
+[DOC_ID:30]
+Cricket is not only a sport but also a source of entertainment and national pride
+in many countries such as India, England, Australia, and Pakistan.
+
+[DOC_ID:31]
+The Indian Premier League (IPL) is a professional T20 cricket league in India founded in 2008.
+
+[DOC_ID:32]
+Chennai Super Kings is a franchise cricket team based in Chennai, Tamil Nadu.
