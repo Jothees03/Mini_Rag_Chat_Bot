@@ -50,28 +50,6 @@ Else → Search Wikipedia
 Safe Summarization
       ↓
 Final Answer + Source
-
----
-
-## 📁 Project Structure
-
-mini_rag_project/
-│
-├── backend/
-│   ├── __init__.py
-│   ├── app.py                 # FastAPI application
-│   ├── rag_core.py            # RAG logic (local-first)
-│   └── data/
-│       └── documents.txt      # Knowledge base
-│
-├── frontend/
-│   ├── index.html             # Chatbot UI
-│   ├── style.css              # Green + Black theme
-│   └── script.js              # API integration
-│
-├── requirements.txt
-└── README.md
-
 ---
 
 ## 📄 Document Format
