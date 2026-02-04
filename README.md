@@ -1,60 +1,59 @@
-# 🔐 Safe RAG Chatbot
-# Local Documents First · Wikipedia Fallback · No Hallucinations
 
-A **Retrieval-Augmented Generation (RAG)** chatbot that **strictly prioritizes local documents** before falling back to **Wikipedia**, ensuring **accurate, grounded, and non-hallucinated answers**.
+# 🔐 Safe RAG Chatbot (Local Documents + Wikipedia)
 
-This project demonstrates a **production-style RAG architecture** using **FastAPI** and a lightweight chatbot frontend built with **HTML, CSS, and JavaScript**.
+A **Retrieval-Augmented Generation (RAG)** chatbot that **strictly prioritizes local documents** before falling back to **Wikipedia**, ensuring **accurate, non-hallucinated answers**.
 
----
+This project demonstrates a **real-world RAG architecture** using:
 
-## 🚀 Key Features
-
-- ✅ Local-first retrieval (documents are always checked first)
-- ✅ Supports unstructured documents ([DOC_ID:x] format)
-- ✅ No hallucinations (LLM answers only from retrieved text)
-- ✅ Wikipedia used only as fallback
-- ✅ FastAPI backend with Swagger UI
-- ✅ Modern green + black chatbot UI
-- ✅ Source attribution (local_document / wikipedia)
-- ✅ Beginner-friendly and extensible design
+* FastAPI backend
+* Local document retrieval
+* Wikipedia fallback
+* Lightweight LLM summarization
+* Pure HTML/CSS/JavaScript frontend chatbot
 
 ---
 
-## 🧠 What Is RAG?
+## 🚀 Features
 
-Retrieval-Augmented Generation (RAG) is an AI technique where:
-1. Relevant documents are retrieved first
-2. An LLM generates answers only using those documents
-
-This prevents:
-- Guessing
-- Fabricated answers
-- Hallucinations
-
-This project implements true RAG behavior, not search-only or LLM-only answering.
+* ✅ **Local-first RAG** (documents are always checked first)
+* ✅ Supports **unstructured documents** (`[DOC_ID:x]` format)
+* ✅ **No hallucinations** (answers generated only from retrieved text)
+* ✅ Wikipedia used **only as fallback**
+* ✅ FastAPI backend with Swagger UI
+* ✅ Modern green & black chatbot UI
+* ✅ Works fully offline for local documents
+* ✅ Beginner-friendly and extensible
 
 ---
 
-## 🔄 RAG Workflow
+## 🧠 How the RAG Pipeline Works
 
-User Question
-      ↓
-Clean & Normalize Query
-      ↓
-Search Local Documents (Mandatory)
-      ↓
-If Found → Answer from Document
-      ↓
-Else → Search Wikipedia
-      ↓
-Safe Summarization
-      ↓
-Final Answer + Source
+1. **User asks a question**
+2. The system:
+
+   * Cleans the query
+   * Searches **local documents first**
+   * Finds the most relevant document using keyword overlap
+3. If a local document is found:
+
+   * The answer is generated **only from that document**
+4. If no document matches:
+
+   * Wikipedia is queried
+   * A short, safe summary is generated
+5. The response is returned with a **clear source label**
+
+```
+Local Documents → Wikipedia → No Answer
+        ↑
+     Priority
+```
 
 ---
 
 ## 📁 Project Structure
 
+```
 mini_rag_project/
 │
 ├── backend/
@@ -71,164 +70,161 @@ mini_rag_project/
 │
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
-## 📄 Document Format
+## 📄 Document Format (`documents.txt`)
 
-Local knowledge is stored in backend/data/documents.txt using the following format:
+Documents are stored as **unstructured blocks**:
 
+```text
 [DOC_ID:1]
 ReValix is an AI-powered real estate analytics platform.
 It helps users analyze property values and investment potential.
 
 [DOC_ID:2]
 Retrieval-Augmented Generation (RAG) is an AI technique
-that retrieves documents before generating answers.
+that retrieves documents first before generating answers.
+```
 
-Why this format?
-- Simple to write
-- Human-readable
-- No strict schema
-- Works across multiple domains (AI, health, sports, etc.)
+* No fixed keys required
+* Supports mixed topics (AI, health, sports, etc.)
+* Easily extensible
 
 ---
 
 ## 🛠️ Tech Stack
 
-Backend:
-- Python 3.10+
-- FastAPI
-- Uvicorn
-- Hugging Face Transformers
-- Requests
+### Backend
 
-Frontend:
-- HTML
-- CSS
-- Vanilla JavaScript
+* **Python 3.10+**
+* **FastAPI**
+* **Uvicorn**
+* **Hugging Face Transformers**
+* **Requests**
+
+### Frontend
+
+* **HTML**
+* **CSS**
+* **JavaScript (Vanilla)**
 
 ---
 
-## ⚙️ Setup Instructions
+## ⚙️ Installation & Setup
 
-### Create Virtual Environment
+### 1️⃣ Create Virtual Environment
+
+```bash
 python -m venv .venv
-
-Activate it (Windows):
 .venv\Scripts\activate
+```
 
-Activate it (Linux / macOS):
-source .venv/bin/activate
+### 2️⃣ Install Dependencies
 
----
-
-### Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ## ▶️ Run the Backend
 
-uvicorn backend.app:app --host 127.0.0.1 --port 3448
+From the project root:
 
-Swagger UI:
-http://127.0.0.1:3448/docs
+```bash
+uvicorn backend.app:app --host 127.0.0.1 --port 3448
+```
+
+* Swagger UI:
+  👉 [http://127.0.0.1:3448/docs](http://127.0.0.1:3448/docs)
 
 ---
 
 ## ▶️ Run the Frontend
 
+Open a new terminal:
+
+```bash
 cd frontend
 python -m http.server 5500
+```
 
 Open in browser:
-http://127.0.0.1:5500
+
+👉 [http://127.0.0.1:5500](http://127.0.0.1:5500)
 
 ---
 
 ## 💬 Example Queries
 
-- what is revalix        → Local Document
-- what is rag            → Local Document
-- what is faiss          → Local Document
-- ipl                    → Local Document
-- chennai super kings    → Local Document
-- ms dhoni               → Wikipedia
-- virat kohli            → Wikipedia
+| Question             | Source Used    |
+| -------------------- | -------------- |
+| `what is revalix`    | Local Document |
+| `what is rag`        | Local Document |
+| `what is faiss`      | Local Document |
+| `ipl`                | Local Document |
+| `ms dhoni`           | Wikipedia      |
+| `who is virat kohli` | Wikipedia      |
 
 ---
 
-## 🔌 API Usage
+## 🧪 API Example
 
-Endpoint:
+### Request
+
+```http
 POST /ask
+Content-Type: application/json
 
-Request:
 {
   "question": "what is rag"
 }
+```
 
-Response:
+### Response
+
+```json
 {
-  "answer": "Retrieval-Augmented Generation (RAG) is an AI technique that retrieves documents first and then generates answers based on that information.",
+  "answer": "Retrieval-Augmented Generation (RAG) is an AI technique that retrieves relevant documents first and then generates answers based on that information.",
   "source": "local_document"
 }
+```
 
 ---
 
 ## 🔍 Why This Project Is Safe
 
-- No uncontrolled LLM output
-- No guessing
-- No hallucinated facts
-- Answers are grounded in retrieved text
-- Clear source attribution
-- Deterministic and explainable behavior
+* ❌ No free-text hallucination
+* ❌ No uncontrolled LLM responses
+* ✅ Answers are grounded in retrieved text
+* ✅ Clear source attribution
+* ✅ Deterministic behavior
 
 ---
 
-## 🧪 How to Verify Local-First Behavior
+## 🧩 Future Improvements
 
-1. Add a topic to documents.txt
-2. Ask the same question in the chatbot
-3. Confirm:
-   Source: local_document
-
-Wikipedia should NOT be used if a document exists.
-
----
-
-## 🧩 Future Enhancements
-
-- FAISS vector embeddings (semantic search)
-- Multiple document citations
-- Confidence scoring
-- Chat memory
-- Authentication / API keys
-- Docker & cloud deployment
-- Streaming responses
+* 🔹 FAISS vector embeddings (semantic search)
+* 🔹 Confidence scoring
+* 🔹 Multiple document citations
+* 🔹 Chat history memory
+* 🔹 Authentication / API keys
+* 🔹 Docker deployment
+* 🔹 Cloud hosting
 
 ---
 
 ## 🧠 Interview-Ready Summary
 
-“I built a local-first RAG chatbot using FastAPI that retrieves answers from a document corpus before falling back to Wikipedia, ensuring accuracy and preventing hallucinations.”
-
----
-
-## 👤 Author
-
-Jotheeswaran  
-AI & ML Developer
+> “I built a local-first RAG chatbot using FastAPI that retrieves answers from a document corpus before falling back to Wikipedia, ensuring accuracy and preventing hallucinations.”
 
 ---
 
 ## 📜 License
 
-This project is intended for learning, demonstration, and portfolio use.
+This project is for **learning and demonstration purposes**.
 You are free to modify and extend it.
 
 ---
-
-⭐ If you found this project useful, consider starring the repository!
