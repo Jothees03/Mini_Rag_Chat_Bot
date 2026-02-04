@@ -37,19 +37,7 @@ This project implements true RAG behavior, not search-only or LLM-only answering
 
 ## 🔄 RAG Workflow
 
-User Question
-      ↓
-Clean & Normalize Query
-      ↓
-Search Local Documents (Mandatory)
-      ↓
-If Found → Answer from Document
-      ↓
-Else → Search Wikipedia
-      ↓
-Safe Summarization
-      ↓
-Final Answer + Source
+User Question → Clean & Normalize Query → Search Local Documents (Mandatory) → If Found → Answer from Document → Else → Search Wikipedia → Safe Summarization → Final Answer + Source
 ---
 
 ## 📄 Document Format
